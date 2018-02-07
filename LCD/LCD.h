@@ -2,14 +2,16 @@
  * LCD.h
  *
  * Author : Hossam Elbahrawy
- */ 
+ */
+ 
 #ifndef LCD_H_
 #define LCD_H_
 
 #include "pin_config.h"
 
-#define LCD_CMD_CLEAR_DISPLAY	          0x01
-#define LCD_CMD_CURSOR_HOME		          0x02
+
+#define LCD_CMD_CLEAR_DISPLAY	             0x01
+#define LCD_CMD_CURSOR_HOME		             0x02
 
 // Display control
 #define LCD_CMD_DISPLAY_OFF                0x08
