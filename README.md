@@ -22,7 +22,7 @@ You will need to have the AVR toolchain installed on your system. This includes:
 * avr-gcc
 * avr-libc
 * avrdude
-* Proutes 8.0 or higher (for simulation)
+* proteus  (for simulation)
 
 Support
 ------

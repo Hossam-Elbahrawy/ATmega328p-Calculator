@@ -1,4 +1,4 @@
-#include "Stack/stack.h"
+#include "stack.h"
 
 /*
 *Function name 	: push

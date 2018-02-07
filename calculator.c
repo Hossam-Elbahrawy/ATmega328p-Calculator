@@ -1,4 +1,4 @@
-#include "calulator.h"
+#include "calculator.h"
 
 /*
 *Function name 	: read_exp

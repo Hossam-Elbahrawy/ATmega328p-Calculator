@@ -1,8 +1,9 @@
 #ifndef _STACK_H_
 #define _STACK_H_
 
+#include <stdint.h>
 #define   IS_FULL     1
-#define   is_empty    0
+#define   IS_EMPTY    0
 
 //Functions prototype
 void    push(uint8_t);

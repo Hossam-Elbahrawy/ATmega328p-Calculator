@@ -3,11 +3,13 @@
  *
  * Author : Hossam Elbahrawy
  */
- 
+
 #ifndef LCD_H_
 #define LCD_H_
 
-#include "pin_config.h"
+#include<avr/io.h>
+#include<util/delay.h>
+#include "../pin_config.h"
 
 
 #define LCD_CMD_CLEAR_DISPLAY	             0x01
