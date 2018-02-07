@@ -42,17 +42,17 @@
 #define		LINE3_PULLUP	PORTD
 
 //LCD Pins
-#define DATA_BUS	PORTD
+#define DATA_BUS	PORTC
 #define CTL_BUS		PORTC
-#define DATA_DDR	DDRD
+#define DATA_DDR	DDRC
 #define CTL_DDR		DDRC
 #define LCD_D4			0
 #define LCD_D5			1
 #define LCD_D6			2
 #define LCD_D7			3
-#define LCD_EN			5
-#define	LCD_RW			4
-#define	LCD_RS			3
+#define LCD_EN			4
+#define	LCD_RW			5
+#define	LCD_RS			6
 
 
 

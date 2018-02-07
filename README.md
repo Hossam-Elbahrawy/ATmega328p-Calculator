@@ -3,7 +3,7 @@ Calculator
 
 Introduction
 ------------
-A 4-digit number calculator program with ATmega328p in using LCD and Keypad with the AVR toolchain without the Arduino IDE.
+A calculator using infix expression evaluation algorithm on ATmega328p using LCD and Keypad with the AVR toolchain without the Arduino IDE.
 
 Hardware
 --------

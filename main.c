@@ -1,18 +1,20 @@
-#include <avr/io.h>
-#include "LCD/LCD.h"
-#include " Keypad/Keypad.h"
+#include "calulator.h"
 
 int main(){
-//May use stack to store numbers??????
 
+  uint8_t * input[20];
+  uint16_t result;
 
+  lcd_init();
+  Keypad_init();
 
-//Get input until getting (+ or - or / or *) store into temp
-// store temp into number
-// if you get (+ or - or * or / ) again
-// store temp into num3 and so on.....
-// get input until you get (=) then
-//do the operations on the numbers
-// print the result on LCD
+  while(1){
+    lcd_write_word("Enter Expression!");
+    lcd_goto_xy(1,0);
+    read_eq();
+    result= infix_exp_eval();
+    print_result(result);
+  }
+
   return 0;
 }
