@@ -2,7 +2,7 @@
 
 int main(){
 
-  uint8_t *input;
+  uint16_t *input;
   uint16_t result;
 
   lcd_init();

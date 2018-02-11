@@ -17,35 +17,35 @@
 #define		ROW2_PORT		  PORTD
 
 #define		ROW3			     3
-#define		ROW3_DDR	  	DDRD
+#define		ROW3_DDR	  	  DDRD
 #define		ROW3_PORT		  PORTD
 
 #define		LINE0			     4
 #define		LINE0_DDR		  DDRD
 #define		LINE0_PIN		  PIND
-#define		LINE0_PULLUP	PORTD
+#define		LINE0_PULLUP	  PORTD
 
 
 #define		LINE1		    	 5
 #define		LINE1_DDR		  DDRD
 #define		LINE1_PIN		  PIND
-#define		LINE1_PULLUP	PORTD
+#define		LINE1_PULLUP	  PORTD
 
 #define		LINE2			     6
 #define		LINE2_DDR		  DDRD
 #define		LINE2_PIN		  PIND
-#define		LINE2_PULLUP	PORTD
+#define		LINE2_PULLUP	  PORTD
 
 #define		LINE3			     7
 #define		LINE3_DDR		  DDRD
 #define		LINE3_PIN		  PIND
-#define		LINE3_PULLUP	PORTD
+#define		LINE3_PULLUP	  PORTD
 
 //LCD DATA AND CONTROL PORTS
-#define   DATA_BUS 	    PORTC
-#define   CTL_BUS		    PORTC
-#define   DATA_DDR	    DDRC
-#define   CTL_DDR		    DDRC
+#define   DATA_BUS 	    	 PORTC
+#define   CTL_BUS		     PORTC
+#define   DATA_DDR	    	 DDRC
+#define   CTL_DDR		     DDRC
 
 //LCD DATA PINS
 #define   LCD_D4			   0

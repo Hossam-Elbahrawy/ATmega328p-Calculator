@@ -2,6 +2,7 @@
 #define _STACK_H_
 
 #include <stdint.h>
+#include <stdlib.h>
 #define   IS_FULL         1
 #define   IS_NOT_FULL     0
 #define   IS_EMPTY        1

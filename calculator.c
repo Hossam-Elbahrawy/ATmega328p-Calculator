@@ -3,23 +3,30 @@
 /*
 *Function name 	: read_exp
 *Parameters	    : void
-*return		   		: uint8_t* input_str
+*return		   		: uint16_t* input
 *purpose       	: reads the input equation string of the calulator
+*            and coverts the numbers from string to decimal
 */
-uint8_t* read_exp(void){
-  uint8_t input_str[20];
-  uint8_t i=0;
+uint16_t* read_exp(void){
+  uint8_t temp[20]={0};
+  uint8_t i=0,j=0;
   uint8_t key_press;
   while(1){
     key_press=keypad_scan();
     if(key_press=='='){
       break;
     }
-    else
-      input_str[i++]=key_press;
+    else if (key_press=='+'||key_press=='*'||key_press=='-'||key_press=='/'){
+      temp[j]='\0';
+      input[i++]=string_to_number(temp);
+      input[i++]=key_press-48;
+      j=0;
+    }
+    else{
+      temp[j++]=key_press;
+    }
   }
-
-  return input_str;
+  return input;
 }
 
 /*
@@ -46,7 +53,6 @@ uint16_t string_to_number(uint8_t* str_num){
 *purpose       	: converting a decimal number to string
 */
 uint8_t* number_to_string(uint16_t number){
-  uint8_t str_num[20];
   uint8_t i=0;
   while(number){
     str_num[i++]=number%10;
@@ -63,8 +69,12 @@ uint8_t* number_to_string(uint16_t number){
 *purpose       	: algorithm for evaluating the input
 *           mathimatical expression in infix form
 */
-uint16_t infix_exp_eval(uint8_t* input){
+uint16_t infix_exp_eval(uint16_t* input){
   uint16_t result;
+  struct Stack * operator = create_stack(100);
+  struct Stack * operand = create_stack(100);
+
+
 
   return result;
 }
@@ -80,19 +90,19 @@ uint16_t do_math(uint16_t num_1,uint16_t num_2,uint8_t op){
   uint16_t result;
   switch (op){
     case '+':
-      result=num2+num1;
+      result=num_2+num_1;
       break;
     case '-':
-      result=num2-num1;
+      result=num_2-num_1;
       break;
     case '*':
-      result=num1*num2;
+      result=num_1*num_2;
       break;
     case '/':
-        if(num1==0){
+        if(num_1==0){
           return -1;
         }
-        resutl=num2/num1;
+        result=num_2/num_1;
         break;
   }
 
@@ -107,7 +117,7 @@ uint16_t do_math(uint16_t num_1,uint16_t num_2,uint8_t op){
 */
 
 void print_result(uint16_t result){
-  uint8_t str_num[20];
-  str_num=number_to_string(result);
+  uint8_t * str_num;
+  str_num = number_to_string(result);
   lcd_write_word(str_num);
 }
