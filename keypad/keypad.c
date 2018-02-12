@@ -114,7 +114,7 @@ uint8_t row=0,input;
 						case 0x70: return '+';
 						case 0xB0: return '=';
 						case 0xD0: return '0';
-						case 0xE0: return 'C';
+						case 0xE0: return 'c';
 					}
 	}
 	return 0;

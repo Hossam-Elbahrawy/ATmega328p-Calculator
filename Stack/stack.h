@@ -17,8 +17,8 @@ struct Stack{
 
 
 //Functions prototype
-struct Stack* create_stack(uint16_t);
-void  push(struct Stack*,uint16_t);
+struct   Stack* create_stack(uint16_t);
+void     push(struct Stack*,uint16_t);
 uint16_t peek(struct Stack*);
 uint16_t pop(struct Stack*);
 uint8_t  is_empty(struct Stack*);
