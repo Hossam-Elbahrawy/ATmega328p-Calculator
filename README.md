@@ -14,7 +14,7 @@ Hardware
 
 Circuit
 --------
-![LED_Matrix](Circuit/Calculator.PNG)
+![Calculator](Circuit/Calculator.PNG)
 
 Installation
 ------------

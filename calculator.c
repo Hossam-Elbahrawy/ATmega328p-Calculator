@@ -12,19 +12,22 @@ uint16_t* read_exp(void){
   uint8_t i=0,j=0;
   uint8_t key_press;
   while(1){
+	  
     key_press=keypad_scan();
-    if(key_press=='='){
-      break;
-    }
-    else if (key_press=='+'||key_press=='*'||key_press=='-'||key_press=='/'){
-      temp[j]='\0';
-      input[i++]=string_to_number(temp);
-      input[i++]=key_press-48;
-      j=0;
-    }
-    else{
-      temp[j++]=key_press;
-    }
+	if(key_press !=0){
+		lcd_write_character(key_press);
+		if(key_press=='=')
+		  break;
+	  
+		else if (key_press=='+'||key_press=='*'||key_press=='-'||key_press=='/'){
+		  temp[j]='\0';
+		  input[i++]=string_to_number(temp);
+		  input[i++]=key_press-48;
+		  j=0;
+		}
+		else
+		  temp[j++]=key_press;
+		}
   }
   return input;
 }

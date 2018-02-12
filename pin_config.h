@@ -13,7 +13,7 @@
 #define		ROW1_PORT		  PORTD
 
 #define		ROW2		     	 2
-#define		ROW2_DDR		  DDRC
+#define		ROW2_DDR		  DDRD
 #define		ROW2_PORT		  PORTD
 
 #define		ROW3			     3
@@ -43,9 +43,9 @@
 
 //LCD DATA AND CONTROL PORTS
 #define   DATA_BUS 	    	 PORTC
-#define   CTL_BUS		     PORTC
+#define   CTL_BUS		     PORTB
 #define   DATA_DDR	    	 DDRC
-#define   CTL_DDR		     DDRC
+#define   CTL_DDR		     DDRB
 
 //LCD DATA PINS
 #define   LCD_D4			   0
@@ -54,9 +54,9 @@
 #define   LCD_D7			   3
 
 // LCD CONTROL PINS
-#define   LCD_EN			   4
-#define	  LCD_RW			   5
-#define	  LCD_RS			   6
+#define   LCD_EN			   0
+#define	  LCD_RW			   1
+#define	  LCD_RS			   2
 
 
 
