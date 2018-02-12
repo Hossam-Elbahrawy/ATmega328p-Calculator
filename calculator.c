@@ -25,7 +25,7 @@ uint16_t scan_and_eval(void){
   while(1){
 	  
     key_press=keypad_scan();
-	if(key_press !=0){			// ALGORITTTTTTTTHM
+	if(key_press !=0){			
 		lcd_write_character(key_press);
 		
 		if(key_press=='='){
@@ -49,8 +49,10 @@ uint16_t scan_and_eval(void){
 		  if(precedence[key_press] < precedence[peek(op)]){
 			  num_2=pop(number);
 			  num_1=pop(number);
-			  result=do_math(num_1,num_2,key_press);
+			  op_temp=pop(op);
+			  result=do_math(num_1,num_2,op_temp);
 			  push(number,result);
+			  push(op,key_press);
 			}
 			else{
 			 push(op,key_press);
@@ -73,7 +75,7 @@ uint16_t string_to_number(uint8_t* str_num){
   uint16_t number=0;
   uint8_t i=0;
   while(str_num[i]!='\0'){
-    number += 10*number + (str_num[i++]-48);
+    number = 10*number + (str_num[i++]-48);
   }
 
   return number;
@@ -111,19 +113,16 @@ uint16_t do_math(uint16_t num_1,uint16_t num_2,uint8_t op){
   uint16_t result=0;
   switch (op){
     case '+':
-      result=num_2+num_1;
+      result=num_1+num_2;
       break;
     case '-':
-      result=num_2-num_1;
+      result=num_1-num_2;
       break;
     case '*':
       result=num_1*num_2;
       break;
     case '/':
-        if(num_1==0){
-          return -1;
-        }
-        result=num_2/num_1;
+        result=num_1/num_2;
         break;
   }
 
